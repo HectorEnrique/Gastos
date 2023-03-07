@@ -1,6 +1,6 @@
 import { NuevoPresupuesto, ControlPresupuesto } from '../components/';
 
-const Header = ({ presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto, spents }) => {
+const Header = ({ presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto, spents, setSpents }) => {
   return (
     <header>
       <h1>Planificador de Presupuestos</h1>
@@ -13,6 +13,7 @@ const Header = ({ presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPre
 
       ) : (
         <NuevoPresupuesto 
+          setSpents      = { setSpents }
           presupuesto    = { presupuesto }
           setPresupuesto = { setPresupuesto }
           setIsValidPresupuesto = { setIsValidPresupuesto }

@@ -14,7 +14,6 @@ function App() {
   const [ modal, setModal ] = useState(false);
   const [animarModal, setAnimarModal ] = useState(false);
 
-
   const [ spents, setSpents ] = useState(LS_GASTOS);
   const [ gastoEditar, setGastoEditar ] = useState({});
 
@@ -103,6 +102,7 @@ function App() {
     <div className={ modal ? 'fijar' : ''}>
       <Header 
         spents = { spents }
+        setSpents = { setSpents }
         presupuesto    = { presupuesto }
         setPresupuesto = { setPresupuesto }
         isValidPresupuesto = { isValidPresupuesto }
